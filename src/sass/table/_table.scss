@@ -1,0 +1,80 @@
+.table {
+    &__block {
+        min-height: 900px;
+        display: flex;
+        flex-wrap: wrap;
+        &_img-1635px {
+            display: none;;
+            background-position-y: 100%;
+        }
+        &_img{
+        background-position-y: 100%;
+        }
+        &_img-1635px, &_img{
+            position: relative;
+            width: 975px;
+            margin-top: 50px;
+            margin-right: 36px;
+            background-image: url(../../img/table_top1.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            
+            &-bottom {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+            
+            .js-btns {
+                position: absolute;
+                width: 473px;
+                height: 200px;
+                bottom: 188px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: space-between;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 40px;
+                &-up {
+                    width: 200px;
+                    height: 200px;
+                    border: none;
+                    border-radius: 100%;
+                    background-color: $btn-color;
+                  
+                    
+                }
+                &-down {
+                    width: 200px;
+                    height: 200px;
+                    border: none;
+                    border-radius: 100%;
+                    background-color: $btn-color;
+                   
+                    
+
+                }
+            }
+       
+        }
+        &_descr {
+            width: 500px;
+   
+        }
+        &_title {
+            h1 {
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: 300;
+                font-size: 62px;
+                color: $main-color;
+                margin-bottom: 84px;
+            }
+        }
+        &_text {
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: 300;
+                font-size: 22px;
+        }
+    }
+}

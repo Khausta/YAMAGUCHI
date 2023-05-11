@@ -1,0 +1,164 @@
+.voice {
+    margin: 0 auto;
+    background-color: $second-color;
+    max-width: 1900px;
+    background-image: url(../../img/voice_bg.png);
+    overflow: hidden;
+    min-height: 900px;
+    &__block {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        min-height: 900px;
+        &>div {
+            &:nth-child(1) {
+                width: 40%;
+            }
+            &:nth-child(2) {
+                width: 30%;
+            }   
+        }
+        &_descr {
+            padding: 49px 0 0 100px;
+            margin-bottom: 51px;
+        }
+        &_title {
+            margin-bottom: 75px;
+            h2 {
+                font-family: 'Montserrat-Regular';
+                font-size: 56px;
+                font-weight: 400;
+                color: $voice-color;
+            }
+        }
+        &_text {
+            padding-right: 40px;
+            p {
+                font-family: 'Montserrat-Regular', sans-serif;
+                font-size: 22px;
+                font-weight: 400; 
+                color: $voice-color;
+            }
+        }
+        &_slogan {
+            font-family: 'Montserrat-Black';
+            color: $voice-color;
+            width: 1000px;
+            margin-top: 58px;
+            &_start {
+                font-size: 45px; 
+                margin-right: 800px;                
+            }
+            &_middle {
+                font-size: 61px;
+                margin-left: 64px;
+            }
+            &_end {
+                font-size: 61px;
+            }
+        }
+        &_animation {
+            position: relative;
+            height: 850px;
+           
+            .js-animation {
+                height: 876px;
+                &__hole {
+                    display: block;
+                    background: #fff;
+                    background-color: #000;
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-radius: 100%;
+                    width: 0;
+                    height: 0;
+                }               
+                .open {
+                    width: 0;
+                    height: 0;
+                    animation: 
+                        narrowing 1.45s ease-out,
+                        reduction 2s ease 1.45s infinite;
+                }
+                @keyframes narrowing  {
+                    0% {
+                        width: 70px;
+                        height: 15px;                      
+                    }
+                    50% {
+                        width: 310px;
+                        height: 61px;
+                    }
+                    100% {
+                        width: 70px;
+                        height: 15px;
+                    }
+            
+                } 
+                @keyframes reduction {
+                    0% {
+                       
+                        width: 70px;
+                        height: 15px;
+                    }
+                    50% {
+                        width: 150px;
+                        height: 30px;
+                    }
+                    100%{
+                        width: 70px;
+                        height: 15px;
+                    }
+                }
+                
+                &__area {
+                    height: 100%;
+                    
+                    display: block;
+                    margin: 0 auto;
+                    clip-path: circle(849px at 50% 0);
+                    overflow: hidden;
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: -750px;
+                        
+                    }
+                    .up { 
+                        transition: bottom 1.2s ease-out 0.2s; 
+                        bottom: 70px;
+                        animation: fly 2s infinite 1.4s ease-in-out;
+                    }
+                    @keyframes fly {
+                        0% {
+                            bottom: 70px;
+                        }
+                        50% {
+                            bottom: 20px;
+                        }
+                        100% {
+                            bottom: 70px;
+                        }
+                    }
+
+                }
+            }
+        }
+        &_chat {
+            
+            img {
+                position: absolute;
+                left: 1092px;
+                width: 790px;
+            }
+        }
+        .slogan-mobile {
+            display: none;
+        }
+    }
+}
+
